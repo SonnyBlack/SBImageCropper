@@ -10,4 +10,7 @@
 
 @interface UIImage (Additions)
 
+- (UIImage *)croppedImage:(CGRect)bounds;
++ (UIImage*)imageWithImage:(UIImage*)sourceImage scaledToSizeWithSameAspectRatio:(CGSize)targetSize;
+
 @end

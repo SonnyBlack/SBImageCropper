@@ -7,7 +7,13 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "SBImageCropper.h"
+#import "SBImagePickerController.h"
 
-@interface SBViewController : UIViewController
+@interface SBViewController : UIViewController <SBImageCropperDelegate, UINavigationControllerDelegate, UIImagePickerControllerDelegate>
+{
+	SBImagePickerController *imPicker;
+	UIImageView				*preview;
+}
 
 @end

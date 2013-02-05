@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		6301AAB316BF0F6D00C89418 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6301AAB216BF0F6D00C89418 /* QuartzCore.framework */; };
+		6303A65D16C0ECA500C80AC8 /* SBImageCropper.m in Sources */ = {isa = PBXBuildFile; fileRef = 6303A65A16C0ECA500C80AC8 /* SBImageCropper.m */; };
+		6303A65E16C0ECA500C80AC8 /* SBImagePickerController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6303A65C16C0ECA500C80AC8 /* SBImagePickerController.m */; };
+		6303A66216C0ECC000C80AC8 /* UIView+Additions.m in Sources */ = {isa = PBXBuildFile; fileRef = 6303A66116C0ECC000C80AC8 /* UIView+Additions.m */; };
+		6303A66516C0ED3D00C80AC8 /* UIImage+Additions.m in Sources */ = {isa = PBXBuildFile; fileRef = 6303A66416C0ED3D00C80AC8 /* UIImage+Additions.m */; };
 		633E5FE116BC802C0047C276 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 633E5FE016BC802C0047C276 /* UIKit.framework */; };
 		633E5FE316BC802C0047C276 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 633E5FE216BC802C0047C276 /* Foundation.framework */; };
 		633E5FE516BC802C0047C276 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 633E5FE416BC802C0047C276 /* CoreGraphics.framework */; };
@@ -21,6 +26,15 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		6301AAB216BF0F6D00C89418 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		6303A65916C0ECA500C80AC8 /* SBImageCropper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SBImageCropper.h; path = SBimageCropper/SBImageCropper.h; sourceTree = "<group>"; };
+		6303A65A16C0ECA500C80AC8 /* SBImageCropper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SBImageCropper.m; path = SBimageCropper/SBImageCropper.m; sourceTree = "<group>"; };
+		6303A65B16C0ECA500C80AC8 /* SBImagePickerController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SBImagePickerController.h; path = SBimageCropper/SBImagePickerController.h; sourceTree = "<group>"; };
+		6303A65C16C0ECA500C80AC8 /* SBImagePickerController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SBImagePickerController.m; path = SBimageCropper/SBImagePickerController.m; sourceTree = "<group>"; };
+		6303A66016C0ECC000C80AC8 /* UIView+Additions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UIView+Additions.h"; path = "Categories/UIView+Additions.h"; sourceTree = "<group>"; };
+		6303A66116C0ECC000C80AC8 /* UIView+Additions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIView+Additions.m"; path = "Categories/UIView+Additions.m"; sourceTree = "<group>"; };
+		6303A66316C0ED3D00C80AC8 /* UIImage+Additions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+Additions.h"; sourceTree = "<group>"; };
+		6303A66416C0ED3D00C80AC8 /* UIImage+Additions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+Additions.m"; sourceTree = "<group>"; };
 		633E5FDD16BC802C0047C276 /* TestRecognizers.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TestRecognizers.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		633E5FE016BC802C0047C276 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		633E5FE216BC802C0047C276 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -44,6 +58,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6301AAB316BF0F6D00C89418 /* QuartzCore.framework in Frameworks */,
 				633E5FE116BC802C0047C276 /* UIKit.framework in Frameworks */,
 				633E5FE316BC802C0047C276 /* Foundation.framework in Frameworks */,
 				633E5FE516BC802C0047C276 /* CoreGraphics.framework in Frameworks */,
@@ -53,6 +68,28 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		6303A65816C0EC9300C80AC8 /* SBImageCropper */ = {
+			isa = PBXGroup;
+			children = (
+				6303A65916C0ECA500C80AC8 /* SBImageCropper.h */,
+				6303A65A16C0ECA500C80AC8 /* SBImageCropper.m */,
+				6303A65B16C0ECA500C80AC8 /* SBImagePickerController.h */,
+				6303A65C16C0ECA500C80AC8 /* SBImagePickerController.m */,
+			);
+			name = SBImageCropper;
+			sourceTree = "<group>";
+		};
+		6303A65F16C0ECAF00C80AC8 /* Categories */ = {
+			isa = PBXGroup;
+			children = (
+				6303A66016C0ECC000C80AC8 /* UIView+Additions.h */,
+				6303A66116C0ECC000C80AC8 /* UIView+Additions.m */,
+				6303A66316C0ED3D00C80AC8 /* UIImage+Additions.h */,
+				6303A66416C0ED3D00C80AC8 /* UIImage+Additions.m */,
+			);
+			name = Categories;
+			sourceTree = "<group>";
+		};
 		633E5FD416BC802C0047C276 = {
 			isa = PBXGroup;
 			children = (
@@ -73,6 +110,7 @@
 		633E5FDF16BC802C0047C276 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				6301AAB216BF0F6D00C89418 /* QuartzCore.framework */,
 				633E5FE016BC802C0047C276 /* UIKit.framework */,
 				633E5FE216BC802C0047C276 /* Foundation.framework */,
 				633E5FE416BC802C0047C276 /* CoreGraphics.framework */,
@@ -83,6 +121,8 @@
 		633E5FE616BC802C0047C276 /* TestRecognizers */ = {
 			isa = PBXGroup;
 			children = (
+				6303A65F16C0ECAF00C80AC8 /* Categories */,
+				6303A65816C0EC9300C80AC8 /* SBImageCropper */,
 				633E5FEF16BC802C0047C276 /* SBAppDelegate.h */,
 				633E5FF016BC802C0047C276 /* SBAppDelegate.m */,
 				633E5FF816BC802C0047C276 /* SBViewController.h */,
@@ -177,6 +217,10 @@
 				633E5FED16BC802C0047C276 /* main.m in Sources */,
 				633E5FF116BC802C0047C276 /* SBAppDelegate.m in Sources */,
 				633E5FFA16BC802C0047C276 /* SBViewController.m in Sources */,
+				6303A65D16C0ECA500C80AC8 /* SBImageCropper.m in Sources */,
+				6303A65E16C0ECA500C80AC8 /* SBImagePickerController.m in Sources */,
+				6303A66216C0ECC000C80AC8 /* UIView+Additions.m in Sources */,
+				6303A66516C0ED3D00C80AC8 /* UIImage+Additions.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -259,9 +303,11 @@
 		633E600116BC802C0047C276 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "TestRecognizers/TestRecognizers-Prefix.pch";
 				INFOPLIST_FILE = "TestRecognizers/TestRecognizers-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -273,6 +319,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "TestRecognizers/TestRecognizers-Prefix.pch";
 				INFOPLIST_FILE = "TestRecognizers/TestRecognizers-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -297,6 +344,7 @@
 				633E600216BC802C0047C276 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

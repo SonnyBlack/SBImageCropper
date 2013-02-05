@@ -8,6 +8,7 @@
 
 #import "SBImagePickerController.h"
 
+
 @interface SBImagePickerController ()
 
 @end
@@ -28,6 +29,21 @@
     [super viewDidLoad];
 	// Do any additional setup after loading the view.
 }
+
+-(void)viewWillAppear:(BOOL)animated
+{
+	[super viewWillAppear:animated];
+	
+	[UIApplication sharedApplication].statusBarHidden = YES;
+}
+
+-(void)viewWillDisappear:(BOOL)animated
+{
+	[super viewWillDisappear:animated];
+	
+	[UIApplication sharedApplication].statusBarHidden = NO;
+}
+
 
 - (void)didReceiveMemoryWarning
 {
