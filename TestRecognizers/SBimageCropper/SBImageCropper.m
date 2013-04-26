@@ -100,9 +100,8 @@
 	[navigationItem setLeftBarButtonItem:[[[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemCancel target:self action:@selector(cancelCropping)] autorelease]];
 	[navigationItem setRightBarButtonItem:[[[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemDone target:self action:@selector(finishCropping)] autorelease]];
 	[navigationBar setItems:[NSArray arrayWithObject:navigationItem]];
-	[navigationItem release];
 	
-	[[self view] addSubview:navigationBar];
+	[self.view addSubview:navigationBar];
 }
 
 -(void)viewDidAppear:(BOOL)animated
@@ -193,21 +192,21 @@
 		{
 			if (imageView.top >= cropper.top)
 			{
-				[UIView animateWithDuration:0.4 delay:0.0 options:UIViewAnimationCurveEaseOut animations:^{
+				[UIView animateWithDuration:0.4 delay:0.0 options:UIViewAnimationOptionCurveEaseOut animations:^{
 										pannedView.center = CGPointMake (cropper.left + pannedView.width / 2, cropper.top + pannedView.height / 2);
 									} completion:nil];
 				return;
 			}
 			else if (imageView.bottom <= cropper.bottom)
 			{
-				[UIView animateWithDuration:0.4 delay:0.0 options:UIViewAnimationCurveEaseOut animations:^{
+				[UIView animateWithDuration:0.4 delay:0.0 options:UIViewAnimationOptionCurveEaseOut animations:^{
 					pannedView.center = CGPointMake (cropper.left + pannedView.width / 2, cropper.bottom - pannedView.height / 2);
 				} completion:nil];
 				return;
 			}
 			else
 			{
-				[UIView animateWithDuration:0.4 delay:0.0 options:UIViewAnimationCurveEaseOut animations:^{
+				[UIView animateWithDuration:0.4 delay:0.0 options:UIViewAnimationOptionCurveEaseOut animations:^{
 					recognizer.view.center = CGPointMake (cropper.left + pannedView.width / 2, pannedView.center.y);
 				} completion:nil];
 				return;
@@ -217,14 +216,14 @@
 		{
 			if (imageView.top <= cropper.top)
 			{
-				[UIView animateWithDuration:0.4 delay:0.0 options:UIViewAnimationCurveEaseOut animations:^{
+				[UIView animateWithDuration:0.4 delay:0.0 options:UIViewAnimationOptionCurveEaseOut animations:^{
 					recognizer.view.center = CGPointMake (cropper.left + pannedView.width / 2, cropper.top + pannedView.height / 2);
 				} completion:nil];
 				return;
 			}
 			else if (imageView.bottom >= cropper.bottom)
 			{
-				[UIView animateWithDuration:0.4 delay:0.0 options:UIViewAnimationCurveEaseOut animations:^{
+				[UIView animateWithDuration:0.4 delay:0.0 options:UIViewAnimationOptionCurveEaseOut animations:^{
 					recognizer.view.center = CGPointMake (cropper.frame.origin.x + pannedView.width / 2, cropper.top + cropper.height - pannedView.height / 2);
 				} completion:nil];
 
@@ -232,7 +231,7 @@
 			}
 			else
 			{
-				[UIView animateWithDuration:0.4 delay:0.0 options:UIViewAnimationCurveEaseOut animations:^{
+				[UIView animateWithDuration:0.4 delay:0.0 options:UIViewAnimationOptionCurveEaseOut animations:^{
 					recognizer.view.center = CGPointMake (cropper.left + pannedView.width / 2, pannedView.center.y);
 				} completion:nil];
 				return;
@@ -243,7 +242,7 @@
 		{
 			if (pannedView.left > cropper.left && pannedView.top > cropper.top)
 			{
-				[UIView animateWithDuration:0.4 delay:0.0 options:UIViewAnimationCurveEaseOut animations:^{
+				[UIView animateWithDuration:0.4 delay:0.0 options:UIViewAnimationOptionCurveEaseOut animations:^{
 					pannedView.center = CGPointMake (cropper.left + pannedView.width / 2, cropper.top + pannedView.height / 2);
 				} completion:nil];
 				return;
@@ -251,7 +250,7 @@
 			
 			if (pannedView.right < cropper.right && pannedView.top > cropper.top)
 			{
-				[UIView animateWithDuration:0.4 delay:0.0 options:UIViewAnimationCurveEaseOut animations:^{
+				[UIView animateWithDuration:0.4 delay:0.0 options:UIViewAnimationOptionCurveEaseOut animations:^{
 					recognizer.view.center = CGPointMake (cropper.right - pannedView.width / 2, cropper.top + pannedView.height / 2);
 				} completion:nil];
 				return;
@@ -259,7 +258,7 @@
 
 			if (pannedView.right < cropper.right && pannedView.bottom < cropper.bottom)
 			{
-				[UIView animateWithDuration:0.4 delay:0.0 options:UIViewAnimationCurveEaseOut animations:^{
+				[UIView animateWithDuration:0.4 delay:0.0 options:UIViewAnimationOptionCurveEaseOut animations:^{
 					recognizer.view.center = CGPointMake (cropper.right - pannedView.width / 2, cropper.bottom - pannedView.height / 2);
 				} completion:nil];
 				return;
@@ -268,7 +267,7 @@
 
 			if (pannedView.left > cropper.left && pannedView.bottom < cropper.bottom)
 			{
-				[UIView animateWithDuration:0.4 delay:0.0 options:UIViewAnimationCurveEaseOut animations:^{
+				[UIView animateWithDuration:0.4 delay:0.0 options:UIViewAnimationOptionCurveEaseOut animations:^{
 					recognizer.view.center = CGPointMake (cropper.left + pannedView.width / 2, cropper.bottom - pannedView.height / 2);
 				} completion:nil];
 				return;
@@ -277,14 +276,14 @@
 	////
 			if (pannedView.left > cropper.left)
 			{
-				[UIView animateWithDuration:0.4 delay:0.0 options:UIViewAnimationCurveEaseOut animations:^{
+				[UIView animateWithDuration:0.4 delay:0.0 options:UIViewAnimationOptionCurveEaseOut animations:^{
 					recognizer.view.center = CGPointMake (cropper.left + pannedView.width / 2, pannedView.center.y);
 				} completion:nil];
 			}
 			
 			if (pannedView.top > cropper.top)
 			{
-				[UIView animateWithDuration:0.4 delay:0.0 options:UIViewAnimationCurveEaseOut animations:^{
+				[UIView animateWithDuration:0.4 delay:0.0 options:UIViewAnimationOptionCurveEaseOut animations:^{
 					recognizer.view.center = CGPointMake (pannedView.center.x, cropper.frame.origin.y + pannedView.height / 2);
 				} completion:nil];
 				
@@ -292,7 +291,7 @@
 			
 			if (pannedView.right < cropper.right)
 			{
-				[UIView animateWithDuration:0.4 delay:0.0 options:UIViewAnimationCurveEaseOut animations:^{
+				[UIView animateWithDuration:0.4 delay:0.0 options:UIViewAnimationOptionCurveEaseOut animations:^{
 					recognizer.view.center = CGPointMake (cropper.right - pannedView.width / 2, pannedView.center.y);
 				} completion:nil];
 				
@@ -301,7 +300,7 @@
 			
 			if (pannedView.bottom < cropper.bottom)
 			{
-				[UIView animateWithDuration:0.4 delay:0.0 options:UIViewAnimationCurveEaseOut animations:^{
+				[UIView animateWithDuration:0.4 delay:0.0 options:UIViewAnimationOptionCurveEaseOut animations:^{
 					recognizer.view.center = CGPointMake (pannedView.center.x, cropper.bottom - pannedView.height / 2);
 				} completion:nil];
 		
@@ -338,7 +337,7 @@
 	
 	if ([recognizer state] == UIGestureRecognizerStateEnded  && lastScale <= 1)
 	{
-		[UIView animateWithDuration:0.4 delay:0.0 options:UIViewAnimationCurveEaseOut animations:^{
+		[UIView animateWithDuration:0.4 delay:0.0 options:UIViewAnimationOptionCurveEaseOut animations:^{
 			recognizer.view.center = CGPointMake (self.view.center.x, self.view.center.y);
 		} completion:nil];
 	}

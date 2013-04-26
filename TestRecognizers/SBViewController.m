@@ -38,6 +38,7 @@
 {
     imPicker = [[SBImagePickerController alloc] init];
     imPicker.delegate = self;
+	imPicker.sourceType =UIImagePickerControllerSourceTypeSavedPhotosAlbum;
     [self presentViewController:imPicker animated:YES completion:nil];
     
 }

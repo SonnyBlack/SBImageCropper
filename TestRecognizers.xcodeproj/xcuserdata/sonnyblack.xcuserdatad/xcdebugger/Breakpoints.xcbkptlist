@@ -8,11 +8,11 @@
          ignoreCount = "0"
          continueAfterRunningActions = "No"
          filePath = "TestRecognizers/SBViewController.m"
-         timestampString = "381751576.805992"
+         timestampString = "388680147.758121"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "49"
-         endingLineNumber = "49"
+         startingLineNumber = "50"
+         endingLineNumber = "50"
          landmarkName = "-imagePickerController:didFinishPickingMediaWithInfo:"
          landmarkType = "5">
       </FileBreakpoint>
@@ -177,11 +177,11 @@
          ignoreCount = "0"
          continueAfterRunningActions = "No"
          filePath = "TestRecognizers/SBimageCropper/SBImageCropper.m"
-         timestampString = "381750680.516239"
+         timestampString = "388679537.259875"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "357"
-         endingLineNumber = "357"
+         startingLineNumber = "356"
+         endingLineNumber = "356"
          landmarkName = "-finishCropping"
          landmarkType = "5">
       </FileBreakpoint>
@@ -203,11 +203,11 @@
          ignoreCount = "0"
          continueAfterRunningActions = "No"
          filePath = "TestRecognizers/SBimageCropper/SBImageCropper.m"
-         timestampString = "381750680.516239"
+         timestampString = "388679537.259875"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "184"
-         endingLineNumber = "184"
+         startingLineNumber = "183"
+         endingLineNumber = "183"
          landmarkName = "-panAction:"
          landmarkType = "5">
       </FileBreakpoint>
@@ -216,11 +216,11 @@
          ignoreCount = "0"
          continueAfterRunningActions = "No"
          filePath = "TestRecognizers/SBimageCropper/SBImageCropper.m"
-         timestampString = "381750680.516239"
+         timestampString = "388679537.259875"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "166"
-         endingLineNumber = "166"
+         startingLineNumber = "165"
+         endingLineNumber = "165"
          landmarkName = "-panAction:"
          landmarkType = "5">
       </FileBreakpoint>
@@ -229,11 +229,11 @@
          ignoreCount = "0"
          continueAfterRunningActions = "No"
          filePath = "TestRecognizers/SBimageCropper/SBImageCropper.m"
-         timestampString = "381750680.516239"
+         timestampString = "388679537.259875"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "179"
-         endingLineNumber = "179"
+         startingLineNumber = "178"
+         endingLineNumber = "178"
          landmarkName = "-panAction:"
          landmarkType = "5">
       </FileBreakpoint>
@@ -242,11 +242,11 @@
          ignoreCount = "0"
          continueAfterRunningActions = "No"
          filePath = "TestRecognizers/SBimageCropper/SBImageCropper.m"
-         timestampString = "381750680.516239"
+         timestampString = "388679537.259875"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "245"
-         endingLineNumber = "245"
+         startingLineNumber = "244"
+         endingLineNumber = "244"
          landmarkName = "-panAction:"
          landmarkType = "5">
       </FileBreakpoint>
@@ -255,11 +255,11 @@
          ignoreCount = "0"
          continueAfterRunningActions = "No"
          filePath = "TestRecognizers/SBimageCropper/SBImageCropper.m"
-         timestampString = "381750680.516239"
+         timestampString = "388679537.259875"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "253"
-         endingLineNumber = "253"
+         startingLineNumber = "252"
+         endingLineNumber = "252"
          landmarkName = "-panAction:"
          landmarkType = "5">
       </FileBreakpoint>
@@ -268,11 +268,11 @@
          ignoreCount = "0"
          continueAfterRunningActions = "No"
          filePath = "TestRecognizers/SBimageCropper/SBImageCropper.m"
-         timestampString = "381750680.516239"
+         timestampString = "388679537.259875"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "261"
-         endingLineNumber = "261"
+         startingLineNumber = "260"
+         endingLineNumber = "260"
          landmarkName = "-panAction:"
          landmarkType = "5">
       </FileBreakpoint>
@@ -281,11 +281,11 @@
          ignoreCount = "0"
          continueAfterRunningActions = "No"
          filePath = "TestRecognizers/SBimageCropper/SBImageCropper.m"
-         timestampString = "381750680.516239"
+         timestampString = "388679537.259875"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "270"
-         endingLineNumber = "270"
+         startingLineNumber = "269"
+         endingLineNumber = "269"
          landmarkName = "-panAction:"
          landmarkType = "5">
       </FileBreakpoint>
