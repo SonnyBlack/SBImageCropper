@@ -18,7 +18,7 @@
 
 @end
 
-
+#define IS_WIDESCREEN ([[UIScreen mainScreen ] bounds].size.height == 568.0f)
 
 @implementation SBImageCropper
 
@@ -86,14 +86,14 @@
 	cropper.layer.shouldRasterize = YES;
     [self.view addSubview:cropper];
     
-	UIView	*bottomMaskingView = [[UIView alloc] initWithFrame:CGRectMake(0.0, 400.0, 320.0, 80.0)];
+	UIView	*bottomMaskingView = [[UIView alloc] initWithFrame:CGRectMake(0.0, (IS_WIDESCREEN ? 488 : 400.0), 320.0, 80.0)];
 	bottomMaskingView.backgroundColor = [UIColor blackColor];
 	bottomMaskingView.alpha = 0.4;
 	bottomMaskingView.userInteractionEnabled = NO;
 	[self.view addSubview:bottomMaskingView];
 	
 	// add navigation bar in bottom side of view with items
-	UINavigationBar *navigationBar = [[UINavigationBar alloc] initWithFrame:CGRectMake(0.0, 436.0, 320.0, 44.0)];
+	UINavigationBar *navigationBar = [[UINavigationBar alloc] initWithFrame:CGRectMake(0.0, (IS_WIDESCREEN ? 524 : 436.0), 320.0, 44.0)];
 	[navigationBar setBarStyle:UIBarStyleBlack];
 	[navigationBar setTranslucent:YES];
 	UINavigationItem *navigationItem = [[UINavigationItem alloc] initWithTitle:@"Move and Scale"];
@@ -110,8 +110,8 @@
 	
 	imageView.image = self.image;
     imageView.contentMode = UIViewContentModeScaleAspectFit;
-//  imageView.layer.borderColor = [[UIColor redColor] CGColor];
-//  imageView.layer.borderWidth = 1.0;
+    //  imageView.layer.borderColor = [[UIColor redColor] CGColor];
+    //  imageView.layer.borderWidth = 1.0;
     CGSize imageSize = imageView.image.size;
     CGFloat imageScale = fminf(CGRectGetWidth(imageView.bounds)/imageSize.width, CGRectGetHeight(imageView.bounds)/imageSize.height);
     CGSize scaledImageSize = CGSizeMake(imageSize.width*imageScale, imageSize.height*imageScale);
@@ -150,7 +150,7 @@
 			{
 				pannedView.center = CGPointMake (pannedView.center.x, cropper.top + pannedView.height / 2 - kINTERNAL_OFFSET);
 			}
-
+            
 			if (pannedView.right > cropper.right + kINTERNAL_OFFSET)
 			{
 				pannedView.center = CGPointMake (cropper.right - pannedView.width / 2 + kINTERNAL_OFFSET, pannedView.center.y);
@@ -167,7 +167,7 @@
 			{
 				pannedView.center = CGPointMake (cropper.left + pannedView.width / 2 + kEXTERNAL_OFFSET, recognizer.view.center.y);
 			}
-
+            
 			
 			if (pannedView.top > cropper.top + kEXTERNAL_OFFSET)
 			{
@@ -187,14 +187,14 @@
 	}
 	else if (recognizer.state == UIGestureRecognizerStateEnded)
 	{
-	
+        
 		if (imageView.width < cropper.width)
 		{
 			if (imageView.top >= cropper.top)
 			{
 				[UIView animateWithDuration:0.4 delay:0.0 options:UIViewAnimationOptionCurveEaseOut animations:^{
-										pannedView.center = CGPointMake (cropper.left + pannedView.width / 2, cropper.top + pannedView.height / 2);
-									} completion:nil];
+                    pannedView.center = CGPointMake (cropper.left + pannedView.width / 2, cropper.top + pannedView.height / 2);
+                } completion:nil];
 				return;
 			}
 			else if (imageView.bottom <= cropper.bottom)
@@ -226,7 +226,7 @@
 				[UIView animateWithDuration:0.4 delay:0.0 options:UIViewAnimationOptionCurveEaseOut animations:^{
 					recognizer.view.center = CGPointMake (cropper.frame.origin.x + pannedView.width / 2, cropper.top + cropper.height - pannedView.height / 2);
 				} completion:nil];
-
+                
 				return;
 			}
 			else
@@ -235,7 +235,7 @@
 					recognizer.view.center = CGPointMake (cropper.left + pannedView.width / 2, pannedView.center.y);
 				} completion:nil];
 				return;
-
+                
 			}
 		}
 		else
@@ -255,7 +255,7 @@
 				} completion:nil];
 				return;
 			}
-
+            
 			if (pannedView.right < cropper.right && pannedView.bottom < cropper.bottom)
 			{
 				[UIView animateWithDuration:0.4 delay:0.0 options:UIViewAnimationOptionCurveEaseOut animations:^{
@@ -264,7 +264,7 @@
 				return;
 				
 			}
-
+            
 			if (pannedView.left > cropper.left && pannedView.bottom < cropper.bottom)
 			{
 				[UIView animateWithDuration:0.4 delay:0.0 options:UIViewAnimationOptionCurveEaseOut animations:^{
@@ -273,7 +273,7 @@
 				return;
 				
 			}
-	////
+            ////
 			if (pannedView.left > cropper.left)
 			{
 				[UIView animateWithDuration:0.4 delay:0.0 options:UIViewAnimationOptionCurveEaseOut animations:^{
@@ -303,10 +303,10 @@
 				[UIView animateWithDuration:0.4 delay:0.0 options:UIViewAnimationOptionCurveEaseOut animations:^{
 					recognizer.view.center = CGPointMake (pannedView.center.x, cropper.bottom - pannedView.height / 2);
 				} completion:nil];
-		
+                
 			}
-		}	
-	}	
+		}
+	}
 }
 
 -(void) zoomAction:(UIPinchGestureRecognizer *)recognizer
