@@ -65,6 +65,10 @@
         bitmapInfo = kCGImageAlphaNoneSkipLast;
     }
 	
+	// fix 
+	bitmapInfo = kCGImageAlphaPremultipliedLast;
+	
+
     CGContextRef bitmap;
 	
     if (sourceImage.imageOrientation == UIImageOrientationUp || sourceImage.imageOrientation == UIImageOrientationDown) {
