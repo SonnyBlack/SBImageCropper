@@ -13,6 +13,9 @@
 #define kEXTERNAL_OFFSET	200.0
 #define kINTERNAL_OFFSET	200.0
 
+// Constants to adjust the max/min values of zoom
+const CGFloat kMaxScale = 4.0;
+const CGFloat kMinScale = 1.0;
 
 @interface SBImageCropper ()
 
@@ -322,10 +325,6 @@
 		
         CGFloat currentScale = [[[recognizer view].layer valueForKeyPath:@"transform.scale"] floatValue];
 		
-        // Constants to adjust the max/min values of zoom
-        const CGFloat kMaxScale = 1.4;
-        const CGFloat kMinScale = 1.0;
-		
         CGFloat newScale = 1 -  (lastScale - [recognizer scale]);
         newScale = MIN(newScale, kMaxScale / currentScale);
         newScale = MAX(newScale, kMinScale / currentScale);
@@ -354,8 +353,13 @@
 
 -(void) finishCropping
 {
-	UIImage *resizedImage = [UIImage imageWithImage:self.image scaledToSizeWithSameAspectRatio:imageView.bounds.size];
-	UIImage *croppedImage = [resizedImage croppedImage:[cropper convertRect:cropper.bounds toView:imageView]];
+    UIImage *resizedImage = [self.image resizeImageToSize:imageView.size];
+	CGPoint offsetPoint = [cropper convertPoint:cropper.bounds.origin fromView:imageView];
+    
+    if (cropper.height >= imageView.height)
+        offsetPoint.y = 0.0;
+    
+	UIImage *croppedImage = [resizedImage croppedImage:CGRectMake(abs((int) offsetPoint.x),  abs((int) offsetPoint.y), cropper.width, cropper.height)];
 	
 	if (_delegate && [_delegate respondsToSelector:@selector(cropperDidFinished:withImage:)])
 	{
